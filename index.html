@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src = 'https://aframe.io/releases/1.0.4/aframe.min.js'></script>
+    
+</head>
+<body>
+    <a-scene background = "color : #000000">
+        <!--Camera-->
+        <a-entity postion = "0 0 15" >
+            <a-camera></a-camera>
+        </a-entity>
+
+        <a-entity
+        sound = "src:https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Ffh_space_discovery_-_earth_proud_music_preview(1).mp3?v=1604306441093; autoplay: true; volume: 0.5">
+
+        </a-entity>
+          
+
+        <!--Sky-->
+        <a-sky
+       
+        src = "https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Ffh_space_discovery_-_earth_proud_music_preview(1).mp3?v=1604306441093; autoplay: true; volume: 0.5">
+
+        </a-sky>
+        <!--Sun-->
+        <a-entity>
+            
+          <a-sphere position = "0 0 0" radius = "2"
+         
+          src = "https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Fsol.jpg?v=1604296185621" >
+
+            </a-sphere>
+        </a-entity>
+        <!--Mercury-->
+        <a-entity position = "0 0 0" rotation = "0 0 0"
+                  animation = "property : rotation; to :0 360 0; easing :linear; loop : true; dur : 20000">
+                <a-sphere position = "1 0 -5 " radius = "0.2"
+                src = "https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Fmercurio.jpg?v=1604298142259" >
+
+                </a-sphere></a-entity>
+
+         <!--Venus-->
+         <a-entity position = "0 0 0" rotation = "0 0 0"
+         animation = "property : rotation; to :0 360 0; easing :linear; loop : true; dur : 25000">
+       <a-sphere position = "3 0 -5 " radius = "0.3"
+       src = "https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Fvenus.jpg?v=1604312437571" >
+
+       </a-sphere></a-entity>
+
+        <!--Earth-->
+        <a-entity position = "0 0 0" rotation = "0 0 0"
+                  animation = "property : rotation; to :0 360 0; easing :linear; loop : true; dur : 30000">
+                <a-sphere position = "5 0 -5 " radius = "0.4"
+                src = "https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Fearth.jpg?v=1604312404511">
+              <!--Moon-->
+              <a-entity position = "0 0 0" rotation = "0 0 0"
+              animation = "property :rotation ; to : 0 360 0; easing : linear ; loop : true ; dur : 10000"></a-entity>
+                 <a-sphere color = "yellow" position = "1 0 0 " radius = "0.2"></a-sphere>
+                </a-entity></a-sphere>
+          
+
+              </a-entity>
+
+          
+
+         <!--Mars-->
+         <a-entity position = "0 0 0" rotation = "0 0 0"
+         animation = "property : rotation; to :0 360 0; easing :linear; loop : true; dur : 35000">
+       <a-sphere position = "7 0 -5 " radius = "0.4"
+       src = "data:image/jpeg;base64,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">
+
+       </a-sphere></a-entity>
+
+        <!--Jupiter-->
+        <a-entity position = "0 0 0" rotation = "0 0 0"
+                  animation = "property : rotation; to :0 360 0; easing :linear; loop : true; dur : 40000">
+                <a-sphere position = "9 0 -5 " radius = "1.2"
+                src = "https://cdn.glitch.me/850dd813-e5e9-4dd0-9751-38981ae74172%2Fjupiter.jpg" >
+
+                </a-sphere></a-entity>
+
+         <!--Saturn-->
+         <a-entity position = "0 0 0" rotation = "0 0 0"
+         animation = "property : rotation; to :0 360 0; easing :linear; loop : true; dur : 45000">
+       <a-sphere position = "11 0 -5 " radius = "0.9"
+       src = "https://cdn.glitch.me/850dd813-e5e9-4dd0-9751-38981ae74172%2Fsaturn.png">
+                <!--Saturn Rings-->
+                <a-torus color="red" radius = "3" rotation ="90 0 0" radius-tubular = "0.015" segments-tubular = "1000"></a-torus>
+                <a-torus color="pink" radius = "2.9" rotation ="90 0 0" radius-tubular = "0.02" segments-tubular = "1000"></a-torus>
+                <a-torus color="ornage" radius = "2.8" rotation ="90 0 0" radius-tubular = "0.025" segments-tubular = "1000"></a-torus>
+              </a-sphere></a-entity>
+
+        <!--Uranus-->
+        <a-entity position = "0 0 0" rotation = "0 0 0"
+                  animation = "property : rotation; to :0 360 0; easing :linear; loop : true; dur : 50000">
+                <a-sphere position = "13 0 -5 " radius = "0.6"
+                src = "https://cdn.glitch.me/850dd813-e5e9-4dd0-9751-38981ae74172%2Fmercurio.jpg" >
+
+                </a-sphere></a-entity>
+
+         <!--Neptune-->
+         <a-entity position = "0 0 0" rotation = "0 0 0"
+         animation = "property : rotation; to :0 360 0; easing :linear; loop : true; dur : 55000">
+       <a-sphere position = "8 0 -5 " radius = "0.2"
+       src = "https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Fmercurio.jpg?v=1604298142259">
+
+       </a-sphere></a-entity>
+       
+      <!--Orbital Paths-->
+      <!--Mercury-->
+      <a-torus color = "grey" rotation = "90 0 0" radius = "5" radius-tubular = "0.01" segments-tubular = "1000"></a-torus>
+         
+      <!--Venus-->
+      <a-torus color = "grey" rotation = "90 0 0" radius = "7.8" radius-tubular = "0.01" segments-tubular = "1000"></a-torus>
+       
+      <!--Earth-->
+      <a-torus color = "grey" rotation = "90 0 0" radius = "10.6" radius-tubular = "0.01" segments-tubular = "1000"></a-torus>
+
+      <!--Mars-->
+      <a-torus color = "grey" rotation = "90 0 0" radius = "14.5" radius-tubular = "0.01" segments-tubular = "1000"></a-torus>
+
+      <!--Jupiter-->
+      <a-torus color = "grey" rotation = "90 0 0" radius = "21.5" radius-tubular = "0.01" segments-tubular = "1000"></a-torus>
+
+      <!--Saturn-->
+      <a-torus color = "grey" rotation = "90 0 0" radius = "26.5" radius-tubular = "0.01" segments-tubular = "1000"></a-torus>
+
+      <!--Uranus-->
+      <a-torus color = "grey" rotation = "90 0 0" radius = "31.5" radius-tubular = "0.01" segments-tubular = "1000"></a-torus>
+
+      <!--Neptune-->
+      <a-torus color = "grey" rotation = "90 0 0" radius = "36.5" radius-tubular = "0.01" segments-tubular = "1000"></a-torus>
+
+    
+    
+    
+    </a-scene>
+</body>
+</html>
